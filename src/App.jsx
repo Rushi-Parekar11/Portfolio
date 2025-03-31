@@ -194,8 +194,9 @@ function App() {
                   type="email"
                   name="email"
                   required
-                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
-                  placeholder="Enter your email"
+                  className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
+             focus:ring-primary focus:border-primary text-white dark:text-white 
+             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Enter your email"
                 />
               </div>
 
@@ -205,8 +206,9 @@ function App() {
                   type="text"
                   name="subject"
                   required
-                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
-                  placeholder="Enter subject"
+                  className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
+             focus:ring-primary focus:border-primary text-white dark:text-white 
+             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Enter subject"
                 />
               </div>
 
@@ -216,16 +218,18 @@ function App() {
                   name="message"
                   rows="4"
                   required
-                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
-                  placeholder="Type your message..."
+                  className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
+             focus:ring-primary focus:border-primary text-white dark:text-white 
+             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Type your message..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 onClick={sendMail}
-                className="w-full bg-primary text-[14px] text-white p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition"
-                disabled={loading}
+                className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
+             focus:ring-primary focus:border-primary text-white dark:text-white 
+             placeholder-gray-500 bg-transparent autofill:bg-transparent"                disabled={loading}
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
