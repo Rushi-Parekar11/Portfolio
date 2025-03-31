@@ -112,7 +112,7 @@ function App() {
 
               {/* Project Cards */}
               {[
-                { 
+                {
                   id: 1,
                   title: "DokJan",
                   description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
@@ -120,7 +120,7 @@ function App() {
                   hostedLink: "https://www.wortheat.in",
                   image: Project3
                 },
-                { 
+                {
                   id: 2,
                   title: "CryptoCraft",
                   description: "A crypto learning platform where users can buy coins at real-time prices, and track profits/losses. It provides real-time market insights and interactive charts for better decision-making.",
@@ -128,7 +128,7 @@ function App() {
                   hostedLink: "https://cryptocraft-green.vercel.app/",
                   image: Project2
                 },
-                { 
+                {
                   id: 3,
                   title: "WorthEat",
                   description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
@@ -181,7 +181,9 @@ function App() {
                   type="text"
                   name="name"
                   required
-                  className="w-full p-2 border-1 border-[#4b4b4b] text-[13px] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-200"
+                  className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
+             focus:ring-primary focus:border-primary text-gray-900 dark:text-white 
+             placeholder-gray-500 bg-transparent autofill:bg-transparent"
                   placeholder="Enter your name"
                 />
               </div>
@@ -219,9 +221,9 @@ function App() {
                 ></textarea>
               </div>
 
-              <button 
-                type="submit" 
-                onClick={sendMail} 
+              <button
+                type="submit"
+                onClick={sendMail}
                 className="w-full bg-primary text-[14px] text-white p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition"
                 disabled={loading}
               >
