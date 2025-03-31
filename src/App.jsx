@@ -5,7 +5,7 @@ import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, Fa
 import { IoLogoJavascript, IoEarth } from "react-icons/io5";
 import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp } from "react-icons/si";
 import { RiWhatsappFill } from "react-icons/ri";
-import pic from './assets/pic.jpeg'
+import pic from './assets/myimgcrop.jpeg'
 import Project1 from './assets/project1.png'
 import Project2 from './assets/project2.png'
 import Project3 from './assets/project3.png'
