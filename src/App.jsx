@@ -57,7 +57,7 @@ function App() {
   
     <>
 
-     <div className='h-[232vh] w-full bg-[#18181b] flex justify-center'>
+     <div className='h-[236vh] w-full bg-[#18181b] flex justify-center'>
      <div className={`h-[132vh] shadow-none w-full bg-[#18181b]  flex justify-center transition-all duration-1000 ${
         blur ? "blur-md" : "blur-0"}`}>
        <div className=" w-[45%] h-full">
