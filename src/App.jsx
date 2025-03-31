@@ -9,11 +9,11 @@ import pic from './assets/myimgcrop.jpeg'
 import Project1 from './assets/project1.png'
 import Project2 from './assets/project2.png'
 import Project3 from './assets/project3.png'
-import emailjs from '@emailjs/browser'; // Import EmailJS
-
+import emailjs from '@emailjs/browser';
 
 function App() {
   const [loading, setloading] = useState(false);
+  const [blur, setBlur] = useState(true);
 
   (function () {
     emailjs.init({
@@ -21,10 +21,9 @@ function App() {
     });
   })();
 
-  // Updated sendMail function
   function sendMail(event) {
     setloading(true);
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     const parms = {
       name: document.getElementById("name").value,
@@ -42,10 +41,7 @@ function App() {
       });
   }
 
-  const [blur, setBlur] = useState(true);
-
   useEffect(() => {
-    // Remove blur after 2 seconds
     const timer = setTimeout(() => {
       setBlur(false);
     }, 200);
@@ -54,270 +50,194 @@ function App() {
   }, []);
 
   return (
-
     <>
-
-      <div className='h-[225vh] w-full bg-[#18181b] flex justify-center'>
-        <div className={`h-[129vh] shadow-none w-full bg-[#18181b]  flex justify-center transition-all duration-1000 ${blur ? "blur-md" : "blur-0"}`}>
-          <div className=" w-[45%] h-full">
-
-
-            <div className=" h-[19vh] mt-6 flex items-center">
-              <img src={pic} alt="Ram Goel" className="w-25 h-25 rounded-full " />
-              <div className='ml-4 '>
+      <div className='min-h-screen w-full bg-[#18181b] flex justify-center'>
+        <div className={`w-full bg-[#18181b] flex justify-center transition-all duration-1000 ${blur ? "blur-md" : "blur-0"}`}>
+          <div className="w-full lg:w-[45%] px-4 lg:px-0 py-6 lg:py-0">
+            {/* Profile Section */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start lg:h-[19vh] mt-6">
+              <img src={pic} alt="Rushikesh Parekar" className="w-24 h-24 lg:w-25 lg:h-25 rounded-full" />
+              <div className='ml-0 lg:ml-4 mt-4 lg:mt-0 text-center lg:text-left'>
                 <h1 className='text-[#ffffff] text-[18px] font-semibold mb-1'>Rushikesh Parekar</h1>
-                <h5 className='text-[#a3a3a3] text-[14px] mb-1 '>Computer science & Engineering | Full Stack | Java </h5>
-                <div className="h-[25px] text-white w-[124px] border-1 border-[#4b4b4b] rounded-2xl flex mt-1 justify-center items-center gap-2">
+                <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | Full Stack | Java</h5>
+                <div className="h-[25px] text-white w-[124px] border-1 border-[#4b4b4b] rounded-2xl flex mt-1 justify-center items-center gap-2 mx-auto lg:mx-0">
                   <FaGoogleDrive className='h-[13px] w-[13px]' />
                   <h3 className='text-[12px] font-medium cursor-pointer'>View Resume</h3>
                 </div>
               </div>
             </div>
 
-
-            <div className=" h-[25vh] mt-2">
+            {/* About Section */}
+            <div className="mt-8 lg:mt-2">
               <h1 className='text-white text-[18px] font-medium'>About</h1>
-              <div className="text-gray-300  mt-3">
-                <p className="font-medium text-[14px]  text-[#a3a3a3]" style={{ lineHeight: '25px', wordSpacing: '0.3em' }}>I am a pre-final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)</p>
-                <p className="font-medium text-[14px] mt-4 text-[#a3a3a3]">You can find me on
+              <div className="text-gray-300 mt-3">
+                <p className="font-medium text-[14px] text-[#a3a3a3]" style={{ lineHeight: '25px', wordSpacing: '0.3em' }}>
+                  I am a pre-final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)
+                </p>
+                <p className="font-medium text-[14px] mt-4 text-[#a3a3a3]">
+                  You can find me on
                   <a href="https://www.linkedin.com/in/rushikesh-parekar/" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-yellow-400"> LinkedIn</a>,
                   <a href="https://github.com/Rushi-Parekar11" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-yellow-400"> GitHub</a>, or
-                  <a href="https://x.com/Rushikeshp62166" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-yellow-400"> twitter </a>
-                  {/* <a href="https://youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:underline"> YouTube</a>. */}
+                  <a href="https://x.com/Rushikeshp62166" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-yellow-400"> twitter</a>
                 </p>
               </div>
             </div>
 
-
-            <div className="h-[15vh] w-[100%] mt-8">
-
-              <div className='h-[5vh] w-[100%] flex-wrap  mt-2 flex gap-2'>
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-3 cursor-pointer transition-all duration-300 transform ">
-                  <IoLogoJavascript className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Javascript</h3>
-                </div>
-
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-3 cursor-pointer transition-all duration-300 transform ">
-                  <FaJava className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Java</h3>
-                </div>
-
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <FaReact className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">React.js</h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <SiExpress className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Express.js</h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <FaNodeJs className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Node.js</h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <SiMongodb className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Mongodb </h3>
-                </div>
+            {/* Skills Section */}
+            <div className="mt-8 lg:mt-8">
+              <div className='flex flex-wrap gap-2 mt-2'>
+                {[
+                  { icon: <IoLogoJavascript className="h-[14px] w-[14px]" />, name: "Javascript" },
+                  { icon: <FaJava className="h-[14px] w-[14px]" />, name: "Java" },
+                  { icon: <FaReact className="h-[14px] w-[14px]" />, name: "React.js" },
+                  { icon: <SiExpress className="h-[14px] w-[14px]" />, name: "Express.js" },
+                  { icon: <FaNodeJs className="h-[14px] w-[14px]" />, name: "Node.js" },
+                  { icon: <SiMongodb className="h-[14px] w-[14px]" />, name: "Mongodb" },
+                  { icon: <SiTailwindcss className="h-[14px] w-[14px]" />, name: "Tailwind" },
+                  { icon: <SiSass className="h-[14px] w-[14px]" />, name: "Sass" },
+                  { icon: <SiFramer className="h-[14px] w-[14px]" />, name: "Framer Motion" },
+                  { icon: <FaGithub className="h-[14px] w-[14px]" />, name: "Github" },
+                ].map((skill, index) => (
+                  <div key={index} className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300">
+                    {skill.icon}
+                    <h3 className="text-[12px] font-medium">{skill.name}</h3>
+                  </div>
+                ))}
               </div>
-
-              <div className='h-[5vh] w-[100%] flex-wrap flex gap-2 '>
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <SiTailwindcss className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium"> Tailwind </h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <SiSass className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium"> Sass </h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <SiFramer className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium">Framer Motion </h3>
-                </div>
-
-                <div className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300 transform ">
-                  <FaGithub className="h-[14px] w-[14px]" />
-                  <h3 className="text-[12px] font-medium"> Github </h3>
-                </div>
-
-              </div>
-
             </div>
 
+            {/* Projects Section */}
+            <div className="mt-10 lg:mt-5">
+              <h1 className='text-white text-[18px] font-medium mb-3'>Project & Work</h1>
 
-            {/* ///project cards div */}
-            <div className=" h-[70vh] ">
-              <h1 className='text-white text-[18px] font-medium mb-3 mt-5'>Project & Work</h1>
+              {/* Project Cards */}
+              {[
+                { 
+                  id: 1,
+                  title: "DokJan",
+                  description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
+                  githubLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
+                  hostedLink: "https://www.wortheat.in",
+                  image: Project3
+                },
+                { 
+                  id: 2,
+                  title: "CryptoCraft",
+                  description: "A crypto learning platform where users can buy coins at real-time prices, and track profits/losses. It provides real-time market insights and interactive charts for better decision-making.",
+                  githubLink: "https://github.com/Rushi-Parekar11/Cryptocraft",
+                  hostedLink: "https://cryptocraft-green.vercel.app/",
+                  image: Project2
+                },
+                { 
+                  id: 3,
+                  title: "WorthEat",
+                  description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
+                  githubLink: "https://github.com/Lunch-Booking-System/LunchBookingSystem",
+                  hostedLink: "https://www.wortheat.in",
+                  image: Project1
+                }
+              ].map((project) => (
+                <div key={project.id} className="relative w-full rounded-lg overflow-hidden shadow-lg mb-5 group">
+                  {/* Image - Hidden on mobile, shown on desktop hover */}
+                  <div className="hidden lg:block absolute left-0 h-full w-2/5 overflow-hidden transition-all duration-300 transform -translate-x-full group-hover:translate-x-0 opacity-0 group-hover:opacity-100">
+                    <a href={project.hostedLink}><img src={project.image} alt={project.title} className="h-full w-full object-cover" /></a>
+                  </div>
 
-              {/* card3 */}
-              <div className="relative max-w-4xl w-full flex hover:border-2 hover:border-[#a3a3a3] rounded-lg overflow-hidden shadow-lg h-[20vh] mb-5 group">
-                <div className="absolute left-0 h-full w-2/5 overflow-hidden transition-all duration-300 transform -translate-x-full group-hover:translate-x-0 opacity-0 group-hover:opacity-100">
-                  <a href="https://github.com/Rushi-Parekar11/Project_Management_Web"><img src={Project3} alt="card-image" className="h-full w-full object-cover" /></a>
-                </div>
-
-                <div className="flex flex-col justify-between w-full h-full px-2 py-4 transition-all duration-300 transform group-hover:ml-[40%]">
-                  <h4 className="text-white text-[15px] mt-[-1px]">
-                    DokJan
-                  </h4>
-
-                  {/* <p className="text-sm text-[#a3a3a3] mt-[-25px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS</p> */}
-
-                  {/* Description */}
-                  <p className="text-[#a3a3a3] font-medium text-[13px] mt-[-13px] ">
-                    Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.    </p>
-
-                  {/* Links Section */}
-                  <div className="flex items-center gap-4 text-white  mb-[-2px]">
-                    <a href="https://github.com/Rushi-Parekar11/Project_Management_Web" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400"  >
-                      <div className="flex items-center justify-center gap-1">
-                        <FaGithub className="h-4 w-4" /><p className='text-[13px]'>View Repo</p>
-                      </div>
-                    </a>
-
-                    <a href="https://www.wortheat.in" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
-                      <div className="flex items-center justify-center gap-1">
-                        <IoEarth className="h-4 w-4" /><p className='text-[13px]'>Hosted Link</p>
-                      </div>
-                    </a>
+                  {/* Text Content - Always visible */}
+                  <div className="w-full px-4 py-4 lg:group-hover:ml-[40%] transition-all duration-300">
+                    <h4 className="text-white text-[15px]">{project.title}</h4>
+                    <p className="text-[#a3a3a3] font-medium text-[13px] mt-2">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center gap-4 text-white mt-3">
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+                        <div className="flex items-center justify-center gap-1">
+                          <FaGithub className="h-4 w-4" />
+                          <p className='text-[13px]'>View Repo</p>
+                        </div>
+                      </a>
+                      <a href={project.hostedLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+                        <div className="flex items-center justify-center gap-1">
+                          <IoEarth className="h-4 w-4" />
+                          <p className='text-[13px]'>Hosted Link</p>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* card2 */}
-              <div className="relative max-w-4xl w-full flex hover:border-2 hover:border-[#a3a3a3] rounded-lg overflow-hidden shadow-lg h-[20vh] mb-5 group">
-                <div className="absolute left-0 h-full w-2/5 overflow-hidden transition-all duration-300 transform -translate-x-full group-hover:translate-x-0 opacity-0 group-hover:opacity-100">
-                  <a href="https://cryptocraft-green.vercel.app/"><img src={Project2} alt="card-image" className="h-full w-full object-cover" /></a>
-                </div>
-
-                <div className="flex flex-col justify-between w-full h-full px-2 py-4 transition-all duration-300 transform group-hover:ml-[40%]">
-                  <h4 className="text-white text-[15px] mt-[-1px]">CryptoCraft</h4>
-                  {/* <p className="text-sm text-[#a3a3a3] mt-[-10px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS,APIs,JWT, bcrypt</p> */}
-                  {/* Description */}
-                  <p className="text-[#a3a3a3] font-medium text-[13px] mt-[-12px]">
-                    A crypto learning platform where users canbuy coins at real-time prices, and track profits/losses. It provides real-time market insights and interactive charts for better decision-making.
-                  </p>
-                  {/* Links Section */}
-                  <div className="flex items-center gap-4 text-white  mb-[-5px]">
-                    <a href="https://github.com/Rushi-Parekar11/Cryptocraft" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400"  >
-                      <div className="flex items-center justify-center gap-1">
-                        <FaGithub className="h-4 w-4" /><p className='text-[13px]'>View Repo</p>
-                      </div>
-                    </a>
-
-                    <a href="https://cryptocraft-green.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
-                      <div className="flex items-center justify-center gap-1">
-                        <IoEarth className="h-4 w-4" /><p className='text-[13px]'>Hosted Link</p>
-                      </div>
-
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-
-              {/* card1 */}
-              <div className="relative max-w-4xl w-full flex hover:border-2 hover:border-[#a3a3a3] rounded-lg overflow-hidden shadow-lg h-[20vh] group">
-                <div className="absolute left-0 h-full w-2/5 overflow-hidden transition-all duration-300 transform -translate-x-full group-hover:translate-x-0 opacity-0 group-hover:opacity-100">
-                  <a href="https://www.wortheat.in"><img src={Project1} alt="card-image" className="h-full w-full object-cover" /></a>
-                </div>
-
-                <div className="flex flex-col justify-between w-full h-full px-2 py-4 transition-all duration-300 transform group-hover:ml-[40%]">
-                  <h4 className="text-white text-[15px] mt-[-1px]">
-                    WorthEat
-                  </h4>
-                  {/* <p className="text-sm text-[#a3a3a3] mt-[-16px] "> ExpressJS,Mongodb,ExpressJS,NodeJS,JWT, bcrypt</p> */}
-
-
-                  {/* Description */}
-                  <p className="text-[#a3a3a3] font-medium text-[13px] mt-[-10px]">
-                    Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.    </p>
-
-                  {/* Links Section */}
-                  <div className="flex items-center gap-4 text-white  mb-[-9px]">
-                    <a href="https://github.com/Lunch-Booking-System/LunchBookingSystem" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400"  >
-                      <div className="flex items-center justify-center gap-1">
-                        <FaGithub className="h-4 w-4" /><p className='text-[13px]'>View Repo</p>
-                      </div>
-                    </a>
-
-                    <a href="https://www.wortheat.in" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
-                      <div className="flex items-center justify-center gap-1">
-                        <IoEarth className="h-4 w-4" /><p className='text-[13px]'>Hosted Link</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-
-
+              ))}
             </div>
 
-            <hr className='text-[#4b4b4b] mt-4' />
-            {/* contact */}
-            <div className="flex w-full justify-center text-white mt-8"> <h1 className='text-white text-[20px] font-medium'>Contact</h1></div>
-            <form className="max-w-sm mx-auto p-6 bg-[#18181b]  rounded-2xl ">
-              <div>
+            <hr className='border-[#4b4b4b] mt-4' />
+
+            {/* Contact Section */}
+            <div className="flex w-full justify-center text-white mt-8">
+              <h1 className='text-white text-[20px] font-medium'>Contact</h1>
+            </div>
+            <form className="max-w-sm mx-auto p-6 bg-[#18181b] rounded-2xl">
+              <div className="mb-4">
                 <input
                   id="name"
                   type="text"
                   name="name"
                   required
-                  className="mt-1 block w-full p-2 border-1 border-[#4b4b4b] text-[13px] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-200"
+                  className="w-full p-2 border-1 border-[#4b4b4b] text-[13px] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-200"
                   placeholder="Enter your name"
                 />
               </div>
 
-              <div>
+              <div className="mb-4">
                 <input
                   id="email"
                   type="email"
                   name="email"
                   required
-                  className="mt-1 block w-full p-2 border-1 text-[13px] border-[#4b4b4b]  rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
+                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
                   placeholder="Enter your email"
                 />
               </div>
 
-              <div>
+              <div className="mb-4">
                 <input
                   id="subject"
                   type="text"
                   name="subject"
                   required
-                  className="mt-1 block w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
+                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
                   placeholder="Enter subject"
                 />
               </div>
 
-              <div>
+              <div className="mb-4">
                 <textarea
                   id="message"
                   name="message"
                   rows="4"
                   required
-                  className="mt-1 block w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
+                  className="w-full p-2 border-1 text-[13px] border-[#4b4b4b] rounded-lg shadow-sm focus:ring-primary focus:border-primary text-gray-900 dark:text-gray-300"
                   placeholder="Type your message..."
                 ></textarea>
               </div>
 
-              <button type="submit" onClick={sendMail} className="w-full bg-primary text-[14px] text-white mt-2 p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition">
-                {loading ? "Sending..." : "Send Message"}  </button>
+              <button 
+                type="submit" 
+                onClick={sendMail} 
+                className="w-full bg-primary text-[14px] text-white p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition"
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
             </form>
-            <div className="w-full flex justify-center"><h1 className='text-white mt-[-10px]'>or</h1></div>
-            <a href="https://wa.me/7756808374" className='flex justify-center'> <button className="w-[50%] bg-primary text-[14px] text-white mt-2 p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition flex justify-center items-center gap-2">
-              <SiWhatsapp />Connect on WhatsApp
-            </button></a>
 
+            <div className="w-full flex justify-center"><h1 className='text-white mt-2'>or</h1></div>
+            <a href="https://wa.me/7756808374" className='flex justify-center'>
+              <button className="w-full max-w-[50%] bg-primary text-[14px] text-white mt-2 p-2 bg-transparent rounded-lg shadow-md border-1 border-[#4b4b4b] hover:bg-primary/90 transition flex justify-center items-center gap-2">
+                <SiWhatsapp />Connect on WhatsApp
+              </button>
+            </a>
 
-            {/* navbar */}
-            <div className="w-full px-6 py-3 mt-[68px] flex items-center justify-between space-x-4 shadow-lg">
+            {/* Footer */}
+            <div className="w-full px-6 py-6 lg:py-3 mt-8 lg:mt-[68px] flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 shadow-lg">
               <span className="text-white font-thin">Designed & Developed by Rushi ❤️</span>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/rushikesh-parekar/" target="_blank" rel="noopener noreferrer">
@@ -334,13 +254,9 @@ function App() {
                 </a>
               </div>
             </div>
-
-
-
           </div>
-
         </div>
-        <ToastContainer/>
+        <ToastContainer />
       </div>
     </>
   )
