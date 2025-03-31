@@ -168,7 +168,7 @@ function App() {
       DokJan
     </h4>
 
-    <p className="text-sm text-[#a3a3a3] mt-[-25px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS</p>
+    {/* <p className="text-sm text-[#a3a3a3] mt-[-25px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS</p> */}
     
     {/* Description */}
     <p className="text-[#a3a3a3] font-medium text-sm mt-[-19px]">
@@ -199,7 +199,7 @@ function App() {
 
   <div className="flex flex-col justify-between w-full h-full px-2 py-4 transition-all duration-300 transform group-hover:ml-[40%]">
     <h4 className="text-white text-lg mt-[-13px]">CryptoCraft</h4>
-    <p className="text-sm text-[#a3a3a3] mt-[-10px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS,APIs,JWT, bcrypt</p>
+    {/* <p className="text-sm text-[#a3a3a3] mt-[-10px] "> reactJS,Mongodb,ExpressJS,NodeJS,ChartJS,APIs,JWT, bcrypt</p> */}
     {/* Description */}
     <p className="text-[#a3a3a3] font-medium text-sm mt-[-6px]">
     A crypto learning platform where users canbuy coins at real-time prices, and track profits/losses. It provides real-time market insights and interactive charts for better decision-making.
@@ -233,7 +233,7 @@ function App() {
     <h4 className="text-white text-lg mt-[-13px]">
       WorthEat
     </h4>
-    <p className="text-sm text-[#a3a3a3] mt-[-16px] "> ExpressJS,Mongodb,ExpressJS,NodeJS,JWT, bcrypt</p>
+    {/* <p className="text-sm text-[#a3a3a3] mt-[-16px] "> ExpressJS,Mongodb,ExpressJS,NodeJS,JWT, bcrypt</p> */}
 
     
     {/* Description */}
