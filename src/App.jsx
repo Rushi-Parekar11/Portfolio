@@ -182,7 +182,7 @@ function App() {
                   name="name"
                   required
                   className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
-             focus:ring-primary focus:border-primary text-gray-900 dark:text-white 
+             focus:ring-primary focus:border-primary text-white dark:text-white 
              placeholder-gray-500 bg-transparent autofill:bg-transparent"
                   placeholder="Enter your name"
                 />
