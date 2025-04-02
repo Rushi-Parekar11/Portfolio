@@ -117,7 +117,7 @@ function App() {
                   title: "DokJan",
                   description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
                   githubLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
-                  hostedLink: "https://www.wortheat.in",
+                  hostedLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
                   image: Project3
                 },
                 {
