@@ -103,7 +103,7 @@ function App() {
                   { icon: <SiTailwindcss className="h-[14px] w-[14px]" />, name: "Tailwind" },
                   { icon: <SiSass className="h-[14px] w-[14px]" />, name: "Sass" },
                   { icon: <SiFramer className="h-[14px] w-[14px]" />, name: "Framer Motion" },
-                  { icon: <FaHtml5  className="h-[14px] w-[14px]" />, name: "HTML/CSS" }, 
+                  { icon: <FaHtml5  className="h-[14px] w-[14px]" />, name: "HTML / CSS" }, 
                   { icon: <FaGitAlt  className="h-[14px] w-[14px]" />, name: "Git" },
                   { icon: <FaGithub className="h-[14px] w-[14px]" />, name: "Github" },
                 ].map((skill, index) => (
