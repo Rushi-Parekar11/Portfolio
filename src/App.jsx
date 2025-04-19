@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTwitter,FaGitAlt  } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
-import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava, } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava,FaHtml5 ,FaCss3  } from "react-icons/fa6";
 import { IoLogoJavascript, IoEarth } from "react-icons/io5";
 import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp } from "react-icons/si";
+import { TbSql } from "react-icons/tb";
+
 import { RiWhatsappFill } from "react-icons/ri";
 import pic from './assets/myimgcrop.jpeg'
 import Project1 from './assets/project1.png'
@@ -97,9 +99,13 @@ function App() {
                   { icon: <SiExpress className="h-[14px] w-[14px]" />, name: "Express.js" },
                   { icon: <FaNodeJs className="h-[14px] w-[14px]" />, name: "Node.js" },
                   { icon: <SiMongodb className="h-[14px] w-[14px]" />, name: "Mongodb" },
+                  { icon: <TbSql className="h-[14px] w-[14px]" />, name: "SQL" },
                   { icon: <SiTailwindcss className="h-[14px] w-[14px]" />, name: "Tailwind" },
                   { icon: <SiSass className="h-[14px] w-[14px]" />, name: "Sass" },
                   { icon: <SiFramer className="h-[14px] w-[14px]" />, name: "Framer Motion" },
+                  { icon: <FaHtml5  className="h-[14px] w-[14px]" />, name: "HTML" }, 
+                  { icon: <FaCss3   className="h-[14px] w-[14px]" />, name: "CSS" },
+                  { icon: <FaGitAlt  className="h-[14px] w-[14px]" />, name: "Git" },
                   { icon: <FaGithub className="h-[14px] w-[14px]" />, name: "Github" },
                 ].map((skill, index) => (
                   <div key={index} className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300">
@@ -187,7 +193,7 @@ function App() {
                   required
                   className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
              focus:ring-primary focus:border-primary text-white dark:text-white 
-             placeholder-gray-500 bg-transparent autofill:bg-transparent"
+             placeholder-[#4b4b4b] bg-transparent autofill:bg-transparent"
                   placeholder="Enter your name"
                 />
               </div>
@@ -200,7 +206,7 @@ function App() {
                   required
                   className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
              focus:ring-primary focus:border-primary text-white dark:text-white 
-             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Enter your email"
+             placeholder-[#4b4b4b] bg-transparent autofill:bg-transparent"                  placeholder="Enter your email"
                 />
               </div>
 
@@ -212,7 +218,7 @@ function App() {
                   required
                   className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
              focus:ring-primary focus:border-primary text-white dark:text-white 
-             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Enter subject"
+             placeholder-[#4b4b4b] bg-transparent autofill:bg-transparent"                  placeholder="Enter subject"
                 />
               </div>
 
@@ -224,7 +230,7 @@ function App() {
                   required
                   className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
              focus:ring-primary focus:border-primary text-white dark:text-white 
-             placeholder-gray-500 bg-transparent autofill:bg-transparent"                  placeholder="Type your message..."
+             placeholder-[#4b4b4b] bg-transparent autofill:bg-transparent"                  placeholder="Type your message..."
                 ></textarea>
               </div>
 
@@ -233,7 +239,7 @@ function App() {
                 onClick={sendMail}
                 className="w-full p-2 border border-[#4b4b4b] text-[13px] rounded-lg shadow-sm 
              focus:ring-primary focus:border-primary text-white dark:text-white 
-             placeholder-gray-500 bg-transparent autofill:bg-transparent"                disabled={loading}
+             placeholder-[#4b4b4b] bg-transparent autofill:bg-transparent"                disabled={loading}
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
@@ -248,7 +254,7 @@ function App() {
 
             {/* Footer */}
             <div className="w-full px-6 py-6 lg:py-3 mt-8 lg:mt-[68px] flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 shadow-lg">
-              <span className="text-white font-thin">Designed & Developed by Rushi ❤️</span>
+              <span className="text-white font-thin">Made by Rushi ❤️</span>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/rushikesh-parekar/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin className="text-white text-2xl hover:text-gray-400 transition duration-300" />
