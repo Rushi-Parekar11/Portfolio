@@ -253,7 +253,7 @@ function App() {
 
             {/* Footer */}
             <div className="w-full px-6 py-6 lg:py-3 mt-8 lg:mt-[68px] flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 shadow-lg">
-              <span className="text-white font-thin">Made by Rushi ❤️</span>
+              <span className="text-white font-thin text-sm">Made by Rushi ❤️</span>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/rushikesh-parekar/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin className="text-white text-2xl hover:text-gray-400 transition duration-300" />
