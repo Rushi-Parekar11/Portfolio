@@ -139,7 +139,7 @@ function App() {
                 },
                 {
                   id: 3,
-                  title: "WorthEat",
+                  title: "WorthEat (Work)",
                   description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
                   githubLink: "https://github.com/Lunch-Booking-System/LunchBookingSystem",
                   hostedLink: "https://www.wortheat.in",
