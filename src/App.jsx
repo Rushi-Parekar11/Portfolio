@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaTwitter,FaGitAlt  } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava,FaHtml5 ,FaCss3  } from "react-icons/fa6";
 import { IoLogoJavascript, IoEarth } from "react-icons/io5";
-import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp ,SiLeetcode ,SiGeeksforgeeks } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 
 import { RiWhatsappFill } from "react-icons/ri";
@@ -266,6 +266,12 @@ function App() {
                 </a>
                 <a href="https://x.com/Rushikeshp62166" target="_blank" rel="noopener noreferrer">
                   <FaTwitter className="text-white text-2xl hover:text-gray-400 transition duration-300" />
+                </a> 
+                <a href="https://leetcode.com/u/Rushikesh_parekar/" target="_blank" rel="noopener noreferrer">
+                  <SiLeetcode className="text-white text-2xl hover:text-gray-400 transition duration-300" />
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/rushikeshpjwf0/" target="_blank" rel="noopener noreferrer">
+                  <SiGeeksforgeeks  className="text-white text-2xl hover:text-gray-400 transition duration-300" />
                 </a>
               </div>
             </div>
