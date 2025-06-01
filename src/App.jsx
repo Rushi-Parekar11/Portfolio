@@ -126,7 +126,7 @@ function App() {
                   title: "DokJan",
                   description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
                   githubLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
-                  hostedLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
+                  hostedLink: "https://project-management-web-litn.vercel.app/",
                   image: Project3
                 },
                 {
@@ -152,7 +152,7 @@ function App() {
                     <a href={project.hostedLink}><img src={project.image} alt={project.title} className="h-full w-full object-cover" /></a>
                   </div>
 
-                  {/* Text Content - Always visible */}
+                  {/* Text Content - Always vibsible */}
                   <div className="w-full px-4 py-4 lg:group-hover:ml-[40%] transition-all duration-300">
                     <h4 className="text-white text-[15px]">{project.title}</h4>
                     <p className="text-[#a3a3a3] font-medium text-[13px] mt-2">
