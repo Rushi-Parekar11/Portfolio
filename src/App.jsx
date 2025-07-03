@@ -126,7 +126,7 @@ function App() {
                 {
                   id: 1,
                   title: "DokJan",
-                  description: "Contributed to the development of WorthEat, a real-time mess management system for IT companies, enhancing meal planning, order management, and user interactions.",
+                  description: "Built a MERN-based project management platform enabling secure document handling and real-time collaboration for 1,000+ users. Improved teacher oversight by clustering 50+ projects and reduced manual effort by 60% through automated tracking.",
                   githubLink: "https://github.com/Rushi-Parekar11/Project_Management_Web",
                   hostedLink: "https://project-management-web-litn.vercel.app/",
                   image: Project3
