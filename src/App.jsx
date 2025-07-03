@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava,FaHtml5 ,FaCss3  } from "react-icons/fa6";
 import { IoLogoJavascript, IoEarth } from "react-icons/io5";
 import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp ,SiLeetcode ,SiGeeksforgeeks } from "react-icons/si";
+import { BsCloudCheckFill } from "react-icons/bs";
+
 import { TbSql } from "react-icons/tb";
 
 import { RiWhatsappFill } from "react-icons/ri";
@@ -78,7 +80,7 @@ function App() {
               <h1 className='text-white text-[18px] font-medium'>About</h1>
               <div className="text-gray-300 mt-3">
                 <p className="font-medium text-[14px] text-[#a3a3a3]" style={{ lineHeight: '25px', wordSpacing: '0.3em' }}>
-                  I am a pre-final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)
+                  I am a final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)
                 </p>
                 <p className="font-medium text-[14px] mt-4 text-[#a3a3a3]">
                   You can find me on
@@ -102,7 +104,7 @@ function App() {
                   { icon: <TbSql className="h-[14px] w-[14px]" />, name: "SQL" },
                   { icon: <SiTailwindcss className="h-[14px] w-[14px]" />, name: "Tailwind" },
                   { icon: <SiSass className="h-[14px] w-[14px]" />, name: "Sass" },
-                  { icon: <SiFramer className="h-[14px] w-[14px]" />, name: "Framer Motion" },
+                  { icon: <BsCloudCheckFill className="h-[14px] w-[14px]" />, name: "cloudinary" },
                   { icon: <FaHtml5  className="h-[14px] w-[14px]" />, name: "HTML / CSS" }, 
                   { icon: <FaGitAlt  className="h-[14px] w-[14px]" />, name: "Git" },
                   { icon: <FaGithub className="h-[14px] w-[14px]" />, name: "Github" },
