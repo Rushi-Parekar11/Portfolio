@@ -66,7 +66,7 @@ function App() {
                 <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | Full Stack | Java</h5>
                 <div
                   className="h-[25px] text-white w-[124px] border-1 border-[#4b4b4b] rounded-2xl flex mt-1 justify-center items-center gap-2 mx-auto lg:mx-0"
-                  onClick={() => window.open('https://drive.google.com/file/d/13q_h1T1tGJr93Td7kTfI1XoU0TcdBVUA/view?usp=sharing', '_blank')}
+                  onClick={()=> window.open('https://drive.google.com/file/d/13q_h1T1tGJr93Td7kTfI1XoU0TcdBVUA/view?usp=sharing', '_blank')}
                 >
                   <FaGoogleDrive className='h-[13px] w-[13px]' />
                   <h3 className='text-[12px] font-medium cursor-pointer'>View Resume</h3>
