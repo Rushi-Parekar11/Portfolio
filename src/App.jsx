@@ -63,7 +63,7 @@ function App() {
               <img src={pic} alt="Rushikesh Parekar" className="w-24 h-24 lg:w-25 lg:h-25 rounded-full" />
               <div className='ml-0 lg:ml-4 mt-4 lg:mt-0 text-center lg:text-left'>
                 <h1 className='text-[#ffffff] text-[18px] font-semibold mb-1'>Rushikesh Parekar</h1>
-                <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | Full Stack | Java</h5>
+                <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | MERN Full Stack | Java</h5>
                 <div
                   className="h-[25px] text-white w-[124px] border-1 border-[#4b4b4b] rounded-2xl flex mt-1 justify-center items-center gap-2 mx-auto lg:mx-0"
                   onClick={()=> window.open('https://drive.google.com/file/d/13q_h1T1tGJr93Td7kTfI1XoU0TcdBVUA/view?usp=sharing', '_blank')}
