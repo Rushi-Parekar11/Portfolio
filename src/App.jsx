@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react'
-import { FaGithub, FaInstagram, FaTwitter,FaGitAlt  } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTwitter, FaGitAlt } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
-import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava,FaHtml5 ,FaCss3  } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaYoutube, FaGoogleDrive, FaReact, FaNodeJs, FaJava, FaHtml5, FaCss3 } from "react-icons/fa6";
 import { IoLogoJavascript, IoEarth } from "react-icons/io5";
-import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp ,SiLeetcode ,SiGeeksforgeeks } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss, SiSass, SiFramer, SiReact, SiWhatsapp, SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import { BsCloudCheckFill } from "react-icons/bs";
+import { SiSpringboot, SiPostgresql, SiHibernate, SiPostman, SiN8N } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
+import { FaBootstrap } from "react-icons/fa";
+
+
 
 import { TbSql } from "react-icons/tb";
 
@@ -63,10 +68,10 @@ function App() {
               <img src={pic} alt="Rushikesh Parekar" className="w-24 h-24 lg:w-25 lg:h-25 rounded-full" />
               <div className='ml-0 lg:ml-4 mt-4 lg:mt-0 text-center lg:text-left'>
                 <h1 className='text-[#ffffff] text-[18px] font-semibold mb-1'>Rushikesh Parekar</h1>
-                <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | MERN Full Stack | Java</h5>
+                <h5 className='text-[#a3a3a3] text-[14px] mb-1'>Computer science & Engineering | Java | Java Full Stack | MERN Stack </h5>
                 <div
                   className="h-[25px] text-white w-[124px] border-1 border-[#4b4b4b] rounded-2xl flex mt-1 justify-center items-center gap-2 mx-auto lg:mx-0"
-                  onClick={()=> window.open('https://drive.google.com/file/d/13q_h1T1tGJr93Td7kTfI1XoU0TcdBVUA/view?usp=sharing', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/file/d/1UPm8z_9ebOnxn9zeHgUScn-V4197dwu2/view?usp=sharing', '_blank')}
                 >
                   <FaGoogleDrive className='h-[13px] w-[13px]' />
                   <h3 className='text-[12px] font-medium cursor-pointer'>View Resume</h3>
@@ -80,7 +85,7 @@ function App() {
               <h1 className='text-white text-[18px] font-medium'>About</h1>
               <div className="text-gray-300 mt-3">
                 <p className="font-medium text-[14px] text-[#a3a3a3]" style={{ lineHeight: '25px', wordSpacing: '0.3em' }}>
-                  I am a final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)
+                  I am a final year B.Tech computer science student passionate about web development, with experience in the MERN stack and Java full stack. I enjoy creating dynamic, user-friendly web applications and am eager to learn and grow :)
                 </p>
                 <p className="font-medium text-[14px] mt-4 text-[#a3a3a3]">
                   You can find me on
@@ -95,19 +100,28 @@ function App() {
             <div className="mt-8 lg:mt-8">
               <div className='flex flex-wrap gap-2 mt-2'>
                 {[
-                  { icon: <IoLogoJavascript className="h-[14px] w-[14px]" />, name: "Javascript" },
                   { icon: <FaJava className="h-[14px] w-[14px]" />, name: "Java" },
+                  { icon: <IoLogoJavascript className="h-[14px] w-[14px]" />, name: "Javascript" },
+                  { icon: <TbSql className="h-[14px] w-[14px]" />, name: "SQL" },
                   { icon: <FaReact className="h-[14px] w-[14px]" />, name: "React.js" },
+                  { icon: <SiSpringboot className="h-[14px] w-[14px]" />, name: "SpringBoot" },
                   { icon: <SiExpress className="h-[14px] w-[14px]" />, name: "Express.js" },
                   { icon: <FaNodeJs className="h-[14px] w-[14px]" />, name: "Node.js" },
                   { icon: <SiMongodb className="h-[14px] w-[14px]" />, name: "Mongodb" },
-                  { icon: <TbSql className="h-[14px] w-[14px]" />, name: "SQL" },
+                  { icon: <SiPostgresql className="h-[14px] w-[14px]" />, name: "PostgreSQL" },
+                  { icon: <DiMysql className="h-[14px] w-[14px]" />, name: "MySQL" },
+                  { icon: <SiN8N className="h-[14px] w-[14px]" />, name: "N8N" },
+                  { icon: <SiHibernate className="h-[14px] w-[14px]" />, name: "Hibernate" },
                   { icon: <SiTailwindcss className="h-[14px] w-[14px]" />, name: "Tailwind" },
+                  { icon: <FaBootstrap className="h-[14px] w-[14px]" />, name: "Bootstrap" },
+                  { icon: <FaHtml5 className="h-[14px] w-[14px]" />, name: "HTML / CSS" },
                   { icon: <SiSass className="h-[14px] w-[14px]" />, name: "Sass" },
-                  { icon: <BsCloudCheckFill className="h-[14px] w-[14px]" />, name: "cloudinary" },
-                  { icon: <FaHtml5  className="h-[14px] w-[14px]" />, name: "HTML / CSS" }, 
-                  { icon: <FaGitAlt  className="h-[14px] w-[14px]" />, name: "Git" },
+                  { icon: <FaGitAlt className="h-[14px] w-[14px]" />, name: "Git" },
                   { icon: <FaGithub className="h-[14px] w-[14px]" />, name: "Github" },
+                  { icon: <BsCloudCheckFill className="h-[14px] w-[14px]" />, name: "cloudinary" },
+                  { icon: <SiPostman className="h-[14px] w-[14px]" />, name: "Postman" },
+
+
                 ].map((skill, index) => (
                   <div key={index} className="h-[24px] min-w-[103px] text-[#a3a3a3] hover:text-white hover:border-white w-fit px-3 border-[1px] border-[#4b4b4b] rounded-2xl flex justify-center items-center gap-2 cursor-pointer transition-all duration-300">
                     {skill.icon}
@@ -268,12 +282,12 @@ function App() {
                 </a>
                 <a href="https://x.com/Rushikeshp62166" target="_blank" rel="noopener noreferrer">
                   <FaTwitter className="text-white text-2xl hover:text-gray-400 transition duration-300" />
-                </a> 
+                </a>
                 <a href="https://leetcode.com/u/Rushikesh_parekar/" target="_blank" rel="noopener noreferrer">
                   <SiLeetcode className="text-white text-2xl hover:text-gray-400 transition duration-300" />
                 </a>
                 <a href="https://www.geeksforgeeks.org/user/rushikeshpjwf0/" target="_blank" rel="noopener noreferrer">
-                  <SiGeeksforgeeks  className="text-white text-2xl hover:text-gray-400 transition duration-300" />
+                  <SiGeeksforgeeks className="text-white text-2xl hover:text-gray-400 transition duration-300" />
                 </a>
               </div>
             </div>
