@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-//import courseBnB from './assets/courseBnB.png'
 import { FaGithub } from "react-icons/fa";
-import { IoEarth } from "react-icons/io5";
-
+import { IoEarth, IoArrowBack } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function Projects() {
     const [blur, setBlur] = useState(true);
+    const navigate = useNavigate();
 
     var data = [
         {
@@ -50,7 +50,6 @@ function Projects() {
             liveLink: "https://rushi-parekar11.github.io/React-TodoList/",
             image: "/assets/todo.png"
         }
-
     ]
 
     useEffect(() => {
@@ -60,17 +59,32 @@ function Projects() {
 
         return () => clearTimeout(timer);
     }, []);
+
     return (
         <div className='min-h-screen w-full bg-[#18181b] flex justify-center'>
             <div className={`w-full bg-[#18181b] flex justify-center transition-all duration-1000 ${blur ? "blur-md" : "blur-0"}`}>
-                <div className="w-full lg:w-[46%] px-4 lg:px-0 py-6 lg:py-0  text-white">
-                    <div className='flex align-center mt-6 mb-10'>
-                        <div className='h-9 w-2 bg-red-800'></div><h1 className='text-white text-[18px] font-medium mb-3 mt-1 ml-1'>Project & Work</h1>
+                <div className="w-full lg:w-[46%] px-4 lg:px-0 py-6 lg:py-0 text-white">
+
+                    {/* BACK BUTTON + TITLE */}
+                    <div className="mt-6 mb-6">
+                        <div 
+                            className="flex items-center gap-2 cursor-pointer mb-4"
+                            onClick={() => navigate(-1)}
+                        >
+                            <IoArrowBack className="h-6 w-6 text-white hover:text-blue-400" />
+                            <span className="text-white text-[14px]">Back</span>
+                        </div>
+
+                        <div className='flex items-center'>
+                            <div className='h-9 w-2 bg-red-800'></div>
+                            <h1 className='text-white text-[18px] font-medium mb-3 mt-1 ml-1'>
+                                Project & Work
+                            </h1>
+                        </div>
                     </div>
 
+                    {/* PROJECT CARDS */}
                     <div className='flex flex-wrap justify-between mb-10'>
-
-
                         {data.map((data, index) => (
                             <div key={index} className='border border-[#4b4b4b] h-73 w-84 rounded-lg mt-8 bg-[#252525]'>
                                 <div className='m-2 flex gap-1'>
@@ -78,8 +92,11 @@ function Projects() {
                                     <div className="h-2 w-2 bg-[#f0bb42] rounded-xl"></div>
                                     <div className="h-2 w-2 bg-[#5eff00] rounded-xl"></div>
                                 </div>
+
                                 <hr className='text-[#4b4b4b]' />
-                                <img src={data.image} alt="img" className=' w-full h-32 w-80 ' />
+
+                                <img src={data.image} alt="img" className='w-full h-32 w-80' />
+
                                 <div className='flex items-center justify-between mx-2 mt-2'>
                                     <h4 className="text-white text-[15px]">{data.Project}</h4>
                                     <div className='flex gap-2'>
@@ -87,23 +104,18 @@ function Projects() {
                                         <a href={data.liveLink} target="_blank" ><IoEarth className="h-5 w-5 hover:text-blue-400" /></a>
                                     </div>
                                 </div>
-                                <p className="text-[#a3a3a3] font-medium text-[12px] p-2 ">{data.Des}</p>
+
+                                <p className="text-[#a3a3a3] font-medium text-[12px] p-2 ">
+                                    {data.Des}
+                                </p>
                             </div>
                         ))}
-
-
-
-
                     </div>
-
-
 
                 </div>
             </div>
         </div>
-
-
     )
 }
 
-export default Projects
+export default Projects;

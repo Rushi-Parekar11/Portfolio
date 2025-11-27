@@ -15,6 +15,7 @@ import Project2 from '../public/assets/project2.png'
 import Project3 from '../public/assets/project3.png'
 import emailjs from '@emailjs/browser';
 import pic from '../public/assets/myimg.jpeg'
+import { Link } from 'react-router-dom';
 
 function HeroPage() {
   const [loading, setloading] = useState(false);
@@ -213,8 +214,10 @@ Message: ${message}
                   </div>
                 </div>
               ))}
+
             </div>
 
+              <Link className='text-blue-500 flex justify-center' to="/projects">more..</Link>
             <hr className='border-[#4b4b4b] mt-4' />
 
             {/* Contact Section */}
